@@ -28,8 +28,8 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 cd myapp
-                python3 hello.py
-                python3 hello.py --name=Ivaylo
+                venv/bin/python hello.py hello.py
+                venv/bin/python hello.py hello.py --name=Ivaylo
                 '''
             }
         }
@@ -44,6 +44,7 @@ pipeline {
     }
 
 }
+
 
 
 
