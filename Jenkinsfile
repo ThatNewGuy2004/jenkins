@@ -14,7 +14,6 @@ pipeline {
                 sh '''
                 cd myapp
                 # Create virtual environment
-                apt install python3.13-venv
                 python3 -m venv venv
                 # Activate venv
                 source venv/bin/activate
@@ -45,6 +44,7 @@ pipeline {
     }
 
 }
+
 
 
 
