@@ -16,7 +16,7 @@ pipeline {
                 # Create virtual environment
                 python3 -m venv venv
                 # Activate venv
-                source venv/bin/activate
+                . venv/bin/activate
                 # Upgrade pip inside venv
                 pip install --upgrade pip
                 pip install -r requirements.txt
@@ -44,6 +44,7 @@ pipeline {
     }
 
 }
+
 
 
 
