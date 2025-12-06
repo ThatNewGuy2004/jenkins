@@ -1,7 +1,10 @@
-import fire
+import click
 
-def hello(name="World"):
-  return "Hello %s!" % name
+@click.command()
+@click.option('--name', default='World', help='Name to greet')
+def hello(name):
+    """Simple program that greets NAME."""
+    click.echo(f"Hello {name}!")
 
 if __name__ == '__main__':
-  fire.Fire(hello)
+    hello()
