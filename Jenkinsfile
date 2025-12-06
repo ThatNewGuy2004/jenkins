@@ -12,7 +12,8 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                pip install --break-system-packages -r /myapp/requirements.txt
+                cd myapp
+                pip install -r requirements.txt
                 '''
             }
         }
@@ -37,6 +38,7 @@ pipeline {
     }
 
 }
+
 
 
 
